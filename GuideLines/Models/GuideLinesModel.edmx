@@ -1,0 +1,556 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BI_GUIDELINESModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="BI_GUIDELINESModelStoreContainer">
+          <EntitySet Name="BookMarks" EntityType="BI_GUIDELINESModel.Store.BookMarks" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ClientBookmarks" EntityType="BI_GUIDELINESModel.Store.ClientBookmarks" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ClientQueues" EntityType="BI_GUIDELINESModel.Store.ClientQueues" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Clients" EntityType="BI_GUIDELINESModel.Store.Clients" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CompetitiveLandscapes" EntityType="BI_GUIDELINESModel.Store.CompetitiveLandscapes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ppr_ProjectListTable" EntityType="BI_GUIDELINESModel.Store.ppr_ProjectListTable" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PPRBITeams" EntityType="BI_GUIDELINESModel.Store.PPRBITeams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PPRQueue" EntityType="BI_GUIDELINESModel.Store.PPRQueue" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PPRTemplateForms" EntityType="BI_GUIDELINESModel.Store.PPRTemplateForms" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserBookmarks" EntityType="BI_GUIDELINESModel.Store.UserBookmarks" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="BookMarks">
+          <Key>
+            <PropertyRef Name="BookmarkId" />
+          </Key>
+          <Property Name="BookmarkId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BookmarkDescription" Type="nvarchar" MaxLength="50" />
+          <Property Name="BookmarklongDescription" Type="nvarchar(max)" />
+          <Property Name="BookmarkProjectId" Type="int" Nullable="false" />
+          <Property Name="BookmarkUserId" Type="int" Nullable="false" />
+          <Property Name="BookmarkAnswer" Type="nvarchar(max)" />
+          <Property Name="BookmarkQuestion" Type="nvarchar(max)" />
+          <Property Name="BookmarkAnswerId" Type="int" />
+          <Property Name="BookmarkAnswerTypeId" Type="int" />
+          <Property Name="BookmarkSectionId" Type="int" />
+          <Property Name="Created" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Updated" Type="datetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ClientBookmarks">
+          <Key>
+            <PropertyRef Name="ClientBookmarksId" />
+          </Key>
+          <Property Name="ClientBookmarksId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ClientId" Type="int" Nullable="false" />
+          <Property Name="BookmarkId" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Created" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Updated" Type="datetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ClientQueues">
+          <Key>
+            <PropertyRef Name="ClientQueueId" />
+          </Key>
+          <Property Name="ClientQueueId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ClientName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProjectName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="TimeStamp" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Created" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Updated" Type="datetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="Browser" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Clients">
+          <Key>
+            <PropertyRef Name="ClientId" />
+          </Key>
+          <Property Name="ClientId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ClientFullName" Type="nvarchar(max)" />
+          <Property Name="ClientTitle" Type="nvarchar(max)" />
+          <Property Name="ClientFirstName" Type="nvarchar(max)" />
+          <Property Name="ClientLastName" Type="nvarchar(max)" />
+          <Property Name="ClientPassword" Type="nvarchar(max)" />
+          <Property Name="ClientProject" Type="nvarchar(max)" />
+          <Property Name="ClientProjectId" Type="nvarchar(max)" />
+          <Property Name="ClientAddress" Type="nvarchar(max)" />
+          <Property Name="ClientPhone" Type="nvarchar(max)" />
+          <Property Name="ClientEmail" Type="nvarchar(max)" />
+          <Property Name="ClientCompany" Type="nvarchar(max)" />
+          <Property Name="ClientQuestions" Type="nvarchar(max)" />
+          <Property Name="ClientEmailSubject" Type="nvarchar(max)" />
+          <Property Name="ClientEmailBody" Type="nvarchar(max)" />
+          <Property Name="AdminEmailAddress" Type="nvarchar(max)" />
+          <Property Name="ClientProjectTemplate" Type="nvarchar(max)" />
+          <Property Name="Created" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Updated" Type="datetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CompetitiveLandscapes">
+          <Key>
+            <PropertyRef Name="CompetitiveLandscapeId" />
+          </Key>
+          <Property Name="CompetitiveLandscapeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectId" Type="int" Nullable="false" />
+          <Property Name="ProjectName" Type="nvarchar(max)" />
+          <Property Name="Company" Type="nvarchar(max)" />
+          <Property Name="BrandName" Type="nvarchar(max)" />
+          <Property Name="NonproprietaryName" Type="nvarchar(max)" />
+          <Property Name="ClinicalTrialName" Type="nvarchar(max)" />
+          <Property Name="ClassName" Type="nvarchar(max)" />
+          <Property Name="PointsOfDifferentiation" Type="nvarchar(max)" />
+          <Property Name="Created" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Updated" Type="datetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ppr_ProjectListTable">
+          <Key>
+            <PropertyRef Name="ppr_ProjectListId" />
+          </Key>
+          <Property Name="ppr_ProjectListId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectName" Type="nvarchar(max)" />
+          <Property Name="SalesDate" Type="datetime" />
+          <Property Name="LeadDirectorName" Type="nvarchar(max)" />
+          <Property Name="BrandManager" Type="nvarchar(max)" />
+          <Property Name="Split" Type="nvarchar(max)" />
+          <Property Name="ProjectAmount" Type="nvarchar(max)" />
+          <Property Name="ClientName" Type="nvarchar(max)" />
+          <Property Name="Office" Type="nvarchar(max)" />
+          <Property Name="Status" Type="nvarchar(max)" />
+          <Property Name="Created" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Updated" Type="datetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PPRBITeams">
+          <Key>
+            <PropertyRef Name="PPRBITeamId" />
+          </Key>
+          <Property Name="PPRBITeamId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TeamName" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="PPRQueue">
+          <Key>
+            <PropertyRef Name="PPRQueueId" />
+          </Key>
+          <Property Name="PPRQueueId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectId" Type="int" Nullable="false" />
+          <Property Name="ProjectName" Type="nvarchar(max)" />
+          <Property Name="Projectlink" Type="nvarchar(max)" />
+          <Property Name="Status" Type="nvarchar(max)" />
+          <Property Name="Created" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Updated" Type="datetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PPRTemplateForms">
+          <Key>
+            <PropertyRef Name="PPRTemplateFormId" />
+          </Key>
+          <Property Name="PPRTemplateFormId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectId" Type="int" Nullable="false" />
+          <Property Name="ProjectName" Type="nvarchar(max)" />
+          <Property Name="Comment" Type="nvarchar(max)" />
+          <Property Name="InputGroup" Type="nvarchar(max)" />
+          <Property Name="Qestion" Type="nvarchar(max)" />
+          <Property Name="TemplateType" Type="nvarchar(max)" />
+          <Property Name="VersionControlString" Type="nvarchar(max)" />
+          <Property Name="Answer" Type="nvarchar(max)" />
+          <Property Name="Created" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Updated" Type="datetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="UserBookmarks">
+          <Key>
+            <PropertyRef Name="UserBookmarkId" />
+          </Key>
+          <Property Name="UserBookmarkId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="BookamrkId" Type="int" />
+          <Property Name="ProjectId" Type="int" />
+          <Property Name="BookmarkSectionId" Type="nvarchar(max)" />
+          <Property Name="Created" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Updated" Type="datetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BI_GUIDELINESModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BookMarks" EntityType="BI_GUIDELINESModel.BookMark" />
+          <EntitySet Name="ClientBookmarks" EntityType="BI_GUIDELINESModel.ClientBookmark" />
+          <EntitySet Name="Clients" EntityType="BI_GUIDELINESModel.Client" />
+          <EntitySet Name="UserBookmarks" EntityType="BI_GUIDELINESModel.UserBookmark" />
+          <EntitySet Name="ppr_ProjectListTable" EntityType="BI_GUIDELINESModel.ppr_ProjectListTable" />
+          <EntitySet Name="CompetitiveLandscapes" EntityType="BI_GUIDELINESModel.CompetitiveLandscape" />
+          <EntitySet Name="PPRQueue" EntityType="BI_GUIDELINESModel.PPRQueue" />
+          <EntitySet Name="PPRTemplateForms" EntityType="BI_GUIDELINESModel.PPRTemplateForm" />
+          <EntitySet Name="ClientQueues" EntityType="BI_GUIDELINESModel.ClientQueue" />
+          <EntitySet Name="PPRBITeams" EntityType="BI_GUIDELINESModel.PPRBITeams" />
+        </EntityContainer>
+        <EntityType Name="BookMark">
+          <Key>
+            <PropertyRef Name="BookmarkId" />
+          </Key>
+          <Property Name="BookmarkId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BookmarkDescription" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="BookmarklongDescription" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="BookmarkProjectId" Type="Int32" Nullable="false" />
+          <Property Name="BookmarkUserId" Type="Int32" Nullable="false" />
+          <Property Type="String" Name="BookmarkAnswer" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="BookmarkQuestion" Nullable="true" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BookmarkAnswerId" Type="Int32" />
+          <Property Name="BookmarkAnswerTypeId" Type="Int32" />
+          <Property Name="BookmarkSectionId" Type="Int32" />
+          <Property Name="Created" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Updated" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="ClientBookmark">
+          <Key>
+            <PropertyRef Name="ClientBookmarksId" />
+          </Key>
+          <Property Name="ClientBookmarksId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClientId" Type="Int32" Nullable="false" />
+          <Property Name="BookmarkId" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Created" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Updated" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="ClientId" />
+          </Key>
+          <Property Name="ClientId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ClientFullName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ClientTitle" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClientFirstName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ClientLastName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="ClientPassword" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ClientProject" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ClientProjectId" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClientAddress" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ClientPhone" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ClientEmail" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ClientCompany" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="ClientQuestions" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ClientEmailSubject" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ClientEmailBody" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AdminEmailAddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ClientProjectTemplate" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Created" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Updated" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="UserBookmark">
+          <Key>
+            <PropertyRef Name="UserBookmarkId" />
+          </Key>
+          <Property Name="UserBookmarkId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="BookamrkId" Type="Int32" />
+          <Property Name="ProjectId" Type="Int32" />
+          <Property Name="BookmarkSectionId" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Created" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Updated" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="ppr_ProjectListTable">
+          <Key>
+            <PropertyRef Name="ppr_ProjectListId" />
+          </Key>
+          <Property Type="Int32" Name="ppr_ProjectListId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ProjectName" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="DateTime" Name="SalesDate" Precision="3" />
+          <Property Type="String" Name="LeadDirectorName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BrandManager" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Split" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProjectAmount" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ClientName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Office" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Status" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Created" Nullable="false" Precision="3" />
+          <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Updated" Precision="3" />
+          <Property Type="String" Name="UpdatedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CompetitiveLandscape">
+          <Key>
+            <PropertyRef Name="CompetitiveLandscapeId" />
+          </Key>
+          <Property Type="Int32" Name="CompetitiveLandscapeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ProjectId" Nullable="false" />
+          <Property Type="String" Name="ProjectName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Company" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BrandName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NonproprietaryName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ClinicalTrialName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ClassName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PointsOfDifferentiation" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Created" Nullable="false" Precision="3" />
+          <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Updated" Precision="3" />
+          <Property Type="String" Name="UpdatedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PPRQueue">
+          <Key>
+            <PropertyRef Name="PPRQueueId" />
+          </Key>
+          <Property Type="Int32" Name="PPRQueueId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ProjectId" Nullable="false" />
+          <Property Type="String" Name="ProjectName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Projectlink" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Status" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Created" Nullable="false" Precision="3" />
+          <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Updated" Precision="3" />
+          <Property Type="String" Name="UpdatedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PPRTemplateForm">
+          <Key>
+            <PropertyRef Name="PPRTemplateFormId" />
+          </Key>
+          <Property Type="Int32" Name="PPRTemplateFormId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ProjectId" Nullable="false" />
+          <Property Type="String" Name="ProjectName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Comment" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="InputGroup" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Qestion" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TemplateType" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="VersionControlString" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Answer" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Created" Nullable="false" Precision="3" />
+          <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Updated" Precision="3" />
+          <Property Type="String" Name="UpdatedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ClientQueue">
+          <Key>
+            <PropertyRef Name="ClientQueueId" />
+          </Key>
+          <Property Name="ClientQueueId" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="ClientName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="ProjectName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="TimeStamp" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Type="String" Name="Browser" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Created" Nullable="false" Precision="3" Type="DateTime" />
+          <Property Name="CreatedBy" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Updated" Precision="3" Type="DateTime" />
+          <Property Name="UpdatedBy" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+        </EntityType>
+        <EntityType Name="PPRBITeams">
+          <Key>
+            <PropertyRef Name="PPRBITeamId" />
+          </Key>
+          <Property Type="Int32" Name="PPRBITeamId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="TeamName" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BI_GUIDELINESModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="BookMarks">
+      <EntityTypeMapping TypeName="IsTypeOf(BI_GUIDELINESModel.BookMark)">
+        <MappingFragment StoreEntitySet="BookMarks">
+          <ScalarProperty Name="BookmarkId" ColumnName="BookmarkId" />
+          <ScalarProperty Name="BookmarkDescription" ColumnName="BookmarkDescription" />
+          <ScalarProperty Name="BookmarklongDescription" ColumnName="BookmarklongDescription" />
+          <ScalarProperty Name="BookmarkProjectId" ColumnName="BookmarkProjectId" />
+          <ScalarProperty Name="BookmarkUserId" ColumnName="BookmarkUserId" />
+          <ScalarProperty Name="BookmarkAnswer" ColumnName="BookmarkAnswer" />
+          <ScalarProperty Name="BookmarkQuestion" ColumnName="BookmarkQuestion" />
+          <ScalarProperty Name="BookmarkAnswerId" ColumnName="BookmarkAnswerId" />
+          <ScalarProperty Name="BookmarkAnswerTypeId" ColumnName="BookmarkAnswerTypeId" />
+          <ScalarProperty Name="BookmarkSectionId" ColumnName="BookmarkSectionId" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Updated" ColumnName="Updated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientBookmarks">
+      <EntityTypeMapping TypeName="IsTypeOf(BI_GUIDELINESModel.ClientBookmark)">
+        <MappingFragment StoreEntitySet="ClientBookmarks">
+          <ScalarProperty Name="ClientBookmarksId" ColumnName="ClientBookmarksId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="BookmarkId" ColumnName="BookmarkId" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Updated" ColumnName="Updated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="IsTypeOf(BI_GUIDELINESModel.Client)">
+        <MappingFragment StoreEntitySet="Clients">
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="ClientFullName" ColumnName="ClientFullName" />
+          <ScalarProperty Name="ClientTitle" ColumnName="ClientTitle" />
+          <ScalarProperty Name="ClientFirstName" ColumnName="ClientFirstName" />
+          <ScalarProperty Name="ClientLastName" ColumnName="ClientLastName" />
+          <ScalarProperty Name="ClientPassword" ColumnName="ClientPassword" />
+          <ScalarProperty Name="ClientProject" ColumnName="ClientProject" />
+          <ScalarProperty Name="ClientProjectId" ColumnName="ClientProjectId" />
+          <ScalarProperty Name="ClientAddress" ColumnName="ClientAddress" />
+          <ScalarProperty Name="ClientPhone" ColumnName="ClientPhone" />
+          <ScalarProperty Name="ClientEmail" ColumnName="ClientEmail" />
+          <ScalarProperty Name="ClientCompany" ColumnName="ClientCompany" />
+          <ScalarProperty Name="ClientQuestions" ColumnName="ClientQuestions" />
+          <ScalarProperty Name="ClientEmailSubject" ColumnName="ClientEmailSubject" />
+          <ScalarProperty Name="ClientEmailBody" ColumnName="ClientEmailBody" />
+          <ScalarProperty Name="AdminEmailAddress" ColumnName="AdminEmailAddress" />
+          <ScalarProperty Name="ClientProjectTemplate" ColumnName="ClientProjectTemplate" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Updated" ColumnName="Updated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserBookmarks">
+      <EntityTypeMapping TypeName="IsTypeOf(BI_GUIDELINESModel.UserBookmark)">
+        <MappingFragment StoreEntitySet="UserBookmarks">
+          <ScalarProperty Name="UserBookmarkId" ColumnName="UserBookmarkId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="BookamrkId" ColumnName="BookamrkId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="BookmarkSectionId" ColumnName="BookmarkSectionId" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Updated" ColumnName="Updated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ppr_ProjectListTable">
+      <EntityTypeMapping TypeName="IsTypeOf(BI_GUIDELINESModel.ppr_ProjectListTable)">
+        <MappingFragment StoreEntitySet="ppr_ProjectListTable">
+          <ScalarProperty Name="ppr_ProjectListId" ColumnName="ppr_ProjectListId" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="SalesDate" ColumnName="SalesDate" />
+          <ScalarProperty Name="LeadDirectorName" ColumnName="LeadDirectorName" />
+          <ScalarProperty Name="BrandManager" ColumnName="BrandManager" />
+          <ScalarProperty Name="Split" ColumnName="Split" />
+          <ScalarProperty Name="ProjectAmount" ColumnName="ProjectAmount" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="Office" ColumnName="Office" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Updated" ColumnName="Updated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CompetitiveLandscapes">
+      <EntityTypeMapping TypeName="IsTypeOf(BI_GUIDELINESModel.CompetitiveLandscape)">
+        <MappingFragment StoreEntitySet="CompetitiveLandscapes">
+          <ScalarProperty Name="CompetitiveLandscapeId" ColumnName="CompetitiveLandscapeId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="NonproprietaryName" ColumnName="NonproprietaryName" />
+          <ScalarProperty Name="ClinicalTrialName" ColumnName="ClinicalTrialName" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+          <ScalarProperty Name="PointsOfDifferentiation" ColumnName="PointsOfDifferentiation" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Updated" ColumnName="Updated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PPRQueue">
+      <EntityTypeMapping TypeName="IsTypeOf(BI_GUIDELINESModel.PPRQueue)">
+        <MappingFragment StoreEntitySet="PPRQueue">
+          <ScalarProperty Name="PPRQueueId" ColumnName="PPRQueueId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="Projectlink" ColumnName="Projectlink" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Updated" ColumnName="Updated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PPRTemplateForms">
+      <EntityTypeMapping TypeName="IsTypeOf(BI_GUIDELINESModel.PPRTemplateForm)">
+        <MappingFragment StoreEntitySet="PPRTemplateForms">
+          <ScalarProperty Name="PPRTemplateFormId" ColumnName="PPRTemplateFormId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="InputGroup" ColumnName="InputGroup" />
+          <ScalarProperty Name="Qestion" ColumnName="Qestion" />
+          <ScalarProperty Name="TemplateType" ColumnName="TemplateType" />
+          <ScalarProperty Name="VersionControlString" ColumnName="VersionControlString" />
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Updated" ColumnName="Updated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientQueues">
+      <EntityTypeMapping TypeName="IsTypeOf(BI_GUIDELINESModel.ClientQueue)">
+        <MappingFragment StoreEntitySet="ClientQueues">
+          <ScalarProperty Name="Browser" ColumnName="Browser" />
+                <ScalarProperty Name="ClientQueueId" ColumnName="ClientQueueId" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Updated" ColumnName="Updated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PPRBITeams">
+      <EntityTypeMapping TypeName="IsTypeOf(BI_GUIDELINESModel.PPRBITeams)">
+        <MappingFragment StoreEntitySet="PPRBITeams">
+          <ScalarProperty Name="PPRBITeamId" ColumnName="PPRBITeamId" />
+          <ScalarProperty Name="TeamName" ColumnName="TeamName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

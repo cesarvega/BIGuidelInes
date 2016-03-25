@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BI_GUIDELINESModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="BI_GUIDELINESModelStoreContainer">
+    <EntitySet Name="BookMarks" EntityType="BI_GUIDELINESModel.Store.BookMarks" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ClientBookmarks" EntityType="BI_GUIDELINESModel.Store.ClientBookmarks" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ClientQueues" EntityType="BI_GUIDELINESModel.Store.ClientQueues" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Clients" EntityType="BI_GUIDELINESModel.Store.Clients" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CompetitiveLandscapes" EntityType="BI_GUIDELINESModel.Store.CompetitiveLandscapes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ppr_ProjectListTable" EntityType="BI_GUIDELINESModel.Store.ppr_ProjectListTable" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PPRBITeams" EntityType="BI_GUIDELINESModel.Store.PPRBITeams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PPRQueue" EntityType="BI_GUIDELINESModel.Store.PPRQueue" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PPRTemplateForms" EntityType="BI_GUIDELINESModel.Store.PPRTemplateForms" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserBookmarks" EntityType="BI_GUIDELINESModel.Store.UserBookmarks" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="BookMarks">
+    <Key>
+      <PropertyRef Name="BookmarkId" />
+    </Key>
+    <Property Name="BookmarkId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BookmarkDescription" Type="nvarchar" MaxLength="50" />
+    <Property Name="BookmarklongDescription" Type="nvarchar(max)" />
+    <Property Name="BookmarkProjectId" Type="int" Nullable="false" />
+    <Property Name="BookmarkUserId" Type="int" Nullable="false" />
+    <Property Name="BookmarkAnswer" Type="nvarchar(max)" />
+    <Property Name="BookmarkQuestion" Type="nvarchar(max)" />
+    <Property Name="BookmarkAnswerId" Type="int" />
+    <Property Name="BookmarkAnswerTypeId" Type="int" />
+    <Property Name="BookmarkSectionId" Type="int" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Updated" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ClientBookmarks">
+    <Key>
+      <PropertyRef Name="ClientBookmarksId" />
+    </Key>
+    <Property Name="ClientBookmarksId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ClientId" Type="int" Nullable="false" />
+    <Property Name="BookmarkId" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Updated" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ClientQueues">
+    <Key>
+      <PropertyRef Name="ClientQueueId" />
+    </Key>
+    <Property Name="ClientQueueId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ClientName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ProjectName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="TimeStamp" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Updated" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="Browser" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="ClientId" />
+    </Key>
+    <Property Name="ClientId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ClientFullName" Type="nvarchar(max)" />
+    <Property Name="ClientTitle" Type="nvarchar(max)" />
+    <Property Name="ClientFirstName" Type="nvarchar(max)" />
+    <Property Name="ClientLastName" Type="nvarchar(max)" />
+    <Property Name="ClientPassword" Type="nvarchar(max)" />
+    <Property Name="ClientProject" Type="nvarchar(max)" />
+    <Property Name="ClientProjectId" Type="nvarchar(max)" />
+    <Property Name="ClientAddress" Type="nvarchar(max)" />
+    <Property Name="ClientPhone" Type="nvarchar(max)" />
+    <Property Name="ClientEmail" Type="nvarchar(max)" />
+    <Property Name="ClientCompany" Type="nvarchar(max)" />
+    <Property Name="ClientQuestions" Type="nvarchar(max)" />
+    <Property Name="ClientEmailSubject" Type="nvarchar(max)" />
+    <Property Name="ClientEmailBody" Type="nvarchar(max)" />
+    <Property Name="AdminEmailAddress" Type="nvarchar(max)" />
+    <Property Name="ClientProjectTemplate" Type="nvarchar(max)" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Updated" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CompetitiveLandscapes">
+    <Key>
+      <PropertyRef Name="CompetitiveLandscapeId" />
+    </Key>
+    <Property Name="CompetitiveLandscapeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="ProjectName" Type="nvarchar(max)" />
+    <Property Name="Company" Type="nvarchar(max)" />
+    <Property Name="BrandName" Type="nvarchar(max)" />
+    <Property Name="NonproprietaryName" Type="nvarchar(max)" />
+    <Property Name="ClinicalTrialName" Type="nvarchar(max)" />
+    <Property Name="ClassName" Type="nvarchar(max)" />
+    <Property Name="PointsOfDifferentiation" Type="nvarchar(max)" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Updated" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ppr_ProjectListTable">
+    <Key>
+      <PropertyRef Name="ppr_ProjectListId" />
+    </Key>
+    <Property Name="ppr_ProjectListId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectName" Type="nvarchar(max)" />
+    <Property Name="SalesDate" Type="datetime" />
+    <Property Name="LeadDirectorName" Type="nvarchar(max)" />
+    <Property Name="BrandManager" Type="nvarchar(max)" />
+    <Property Name="Split" Type="nvarchar(max)" />
+    <Property Name="ProjectAmount" Type="nvarchar(max)" />
+    <Property Name="ClientName" Type="nvarchar(max)" />
+    <Property Name="Office" Type="nvarchar(max)" />
+    <Property Name="Status" Type="nvarchar(max)" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Updated" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PPRBITeams">
+    <Key>
+      <PropertyRef Name="PPRBITeamId" />
+    </Key>
+    <Property Name="PPRBITeamId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TeamName" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="PPRQueue">
+    <Key>
+      <PropertyRef Name="PPRQueueId" />
+    </Key>
+    <Property Name="PPRQueueId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="ProjectName" Type="nvarchar(max)" />
+    <Property Name="Projectlink" Type="nvarchar(max)" />
+    <Property Name="Status" Type="nvarchar(max)" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Updated" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PPRTemplateForms">
+    <Key>
+      <PropertyRef Name="PPRTemplateFormId" />
+    </Key>
+    <Property Name="PPRTemplateFormId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="ProjectName" Type="nvarchar(max)" />
+    <Property Name="Comment" Type="nvarchar(max)" />
+    <Property Name="InputGroup" Type="nvarchar(max)" />
+    <Property Name="Qestion" Type="nvarchar(max)" />
+    <Property Name="TemplateType" Type="nvarchar(max)" />
+    <Property Name="VersionControlString" Type="nvarchar(max)" />
+    <Property Name="Answer" Type="nvarchar(max)" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Updated" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UserBookmarks">
+    <Key>
+      <PropertyRef Name="UserBookmarkId" />
+    </Key>
+    <Property Name="UserBookmarkId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="BookamrkId" Type="int" />
+    <Property Name="ProjectId" Type="int" />
+    <Property Name="BookmarkSectionId" Type="nvarchar(max)" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Updated" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+</Schema>

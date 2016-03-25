@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="RESPONDENTSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="RESPONDENTSModelStoreContainer">
+    <EntitySet Name="PERSONAL_INFO" EntityType="RESPONDENTSModel.Store.PERSONAL_INFO" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="PERSONAL_INFO">
+    <Key>
+      <PropertyRef Name="USERNAME" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERNAME" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PASSWORD" Type="varchar" Nullable="true" MaxLength="25" />
+    <Property Name="FIRST_NAME" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="LAST_NAME" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="ADDRESS" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="ADDRESS2" Type="char" Nullable="true" MaxLength="30" />
+    <Property Name="CITY" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="STATE_PROVINCE" Type="varchar" Nullable="true" MaxLength="25" />
+    <Property Name="ZIP" Type="varchar" Nullable="true" MaxLength="12" />
+    <Property Name="COUNTRY" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="CountryCode" Type="int" Nullable="true" />
+    <Property Name="HOME_PHONE" Type="varchar" Nullable="true" MaxLength="20" />
+    <Property Name="WORK_PHONE" Type="varchar" Nullable="true" MaxLength="20" />
+    <Property Name="FAX" Type="varchar" Nullable="true" MaxLength="20" />
+    <Property Name="EMAIL" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="RESTYPE" Type="varchar" Nullable="true" MaxLength="15" />
+    <Property Name="REFERRED_BY" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="AGE" Type="varchar" Nullable="true" MaxLength="10" />
+    <Property Name="SEX" Type="varchar" Nullable="true" MaxLength="5" />
+    <Property Name="MARITAL_STATUS" Type="varchar" Nullable="true" MaxLength="10" />
+    <Property Name="CHILDREN" Type="varchar" Nullable="true" MaxLength="3" />
+    <Property Name="OCCUPATIONAL_FIELD" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="TITLE_POSITION" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="HOUSEHOLD_INCOME" Type="varchar" Nullable="true" MaxLength="25" />
+    <Property Name="US_CITIZEN" Type="varchar" Nullable="true" MaxLength="5" />
+    <Property Name="EDUCATION" Type="varchar" Nullable="true" MaxLength="30" />
+    <Property Name="ETHNIC" Type="varchar" Nullable="true" MaxLength="40" />
+    <Property Name="PRACTICE_TYPE" Type="varchar" Nullable="true" MaxLength="20" />
+    <Property Name="AMA_ID" Type="varchar" Nullable="true" MaxLength="15" />
+    <Property Name="BROWSER" Type="varchar" Nullable="true" MaxLength="40" />
+    <Property Name="LAST_UPDATED" Type="datetime" Nullable="true" />
+    <Property Name="ssn" Type="varchar" Nullable="true" MaxLength="16" />
+    <Property Name="paypal" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="paypalemail" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="active" Type="varchar" Nullable="true" MaxLength="5" />
+    <Property Name="maiden" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="nurse_class" Type="varchar" Nullable="true" MaxLength="5" />
+    <Property Name="acct_username" Type="varchar" Nullable="true" MaxLength="20" />
+    <Property Name="acct_restype" Type="varchar" Nullable="true" MaxLength="3" />
+    <Property Name="program_code" Type="int" Nullable="true" />
+    <Property Name="DOMAIN" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="LIC_NUM" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="LIC_STATE" Type="varchar" Nullable="true" MaxLength="25" />
+    <Property Name="verified" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="Smoke" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="HowManyPacks" Type="char" Nullable="true" MaxLength="20" />
+    <Property Name="Drink" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="HowManyDrinks" Type="char" Nullable="true" MaxLength="20" />
+    <Property Name="WillParticipate" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="SignedUp" Type="datetime" Nullable="true" />
+    <Property Name="ReceiveEmail" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="CheckedPreferences" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="CheckedMedicalField" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="Pets" Type="char" Nullable="true" MaxLength="10" />
+    <Property Name="TestAccount" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="AreYouAHuntingEnthusiast" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="AreYouASportsEnthusiast" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="Coded" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="Add2" Type="char" Nullable="true" MaxLength="30" />
+    <Property Name="AlternateEmail" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Bounced" Type="datetime" Nullable="true" />
+    <Property Name="UsingAlias" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="mag1" Type="varchar" Nullable="true" MaxLength="500" />
+    <Property Name="mag2" Type="varchar" Nullable="true" MaxLength="500" />
+    <Property Name="mag3" Type="varchar" Nullable="true" MaxLength="500" />
+    <Property Name="Agent" Type="char" Nullable="true" MaxLength="10" />
+    <Property Name="RefID" Type="varchar" Nullable="true" MaxLength="25" />
+    <Property Name="ValidEmail" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="InvitationID" Type="int" Nullable="true" />
+    <Property Name="HeardByPostcard" Type="bit" Nullable="true" />
+    <Property Name="HeardByFax" Type="bit" Nullable="true" />
+    <Property Name="HeardByPhone" Type="bit" Nullable="true" />
+    <Property Name="HeardByFriend" Type="bit" Nullable="true" />
+    <Property Name="HeardByColleague" Type="bit" Nullable="true" />
+    <Property Name="HeardByOther" Type="bit" Nullable="true" />
+    <Property Name="HeardOtherSpecify" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="HeardByEmail" Type="bit" Nullable="true" />
+    <Property Name="InvFaxNumber" Type="varchar" Nullable="true" MaxLength="40" />
+    <Property Name="Notes" Type="varchar" Nullable="true" MaxLength="500" />
+    <Property Name="active_ogr" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="OldUsername" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="MedicalSchool" Type="varchar" Nullable="true" MaxLength="150" />
+  </EntityType>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RESPONDENTSModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="RESPONDENTSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PERSONAL_INFO" EntityType="RESPONDENTSModel.PERSONAL_INFO" />
+        </EntityContainer>
+        <EntityType Name="PERSONAL_INFO">
+          <Key>
+            <PropertyRef Name="USERNAME" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERNAME" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PASSWORD" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="FIRST_NAME" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="LAST_NAME" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ADDRESS" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ADDRESS2" Type="String" MaxLength="30" Unicode="false" FixedLength="true" />
+          <Property Name="CITY" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="STATE_PROVINCE" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="ZIP" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="COUNTRY" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CountryCode" Type="Int32" />
+          <Property Name="HOME_PHONE" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="WORK_PHONE" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="FAX" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="RESTYPE" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="REFERRED_BY" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="AGE" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="SEX" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="MARITAL_STATUS" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="CHILDREN" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="OCCUPATIONAL_FIELD" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TITLE_POSITION" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="HOUSEHOLD_INCOME" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="US_CITIZEN" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="EDUCATION" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="ETHNIC" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="PRACTICE_TYPE" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="AMA_ID" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="BROWSER" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="LAST_UPDATED" Type="DateTime" Precision="3" />
+          <Property Name="ssn" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="paypal" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="paypalemail" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="active" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="maiden" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="nurse_class" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="acct_username" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="acct_restype" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="program_code" Type="Int32" />
+          <Property Name="DOMAIN" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="LIC_NUM" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="LIC_STATE" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="verified" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="Smoke" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="HowManyPacks" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="Drink" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="HowManyDrinks" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="WillParticipate" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="SignedUp" Type="DateTime" Precision="3" />
+          <Property Name="ReceiveEmail" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="CheckedPreferences" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="CheckedMedicalField" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="Pets" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="TestAccount" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="AreYouAHuntingEnthusiast" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="AreYouASportsEnthusiast" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="Coded" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="Add2" Type="String" MaxLength="30" Unicode="false" FixedLength="true" />
+          <Property Name="AlternateEmail" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Bounced" Type="DateTime" Precision="3" />
+          <Property Name="UsingAlias" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="mag1" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mag2" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mag3" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Agent" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="RefID" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="ValidEmail" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="InvitationID" Type="Int32" />
+          <Property Name="HeardByPostcard" Type="Boolean" />
+          <Property Name="HeardByFax" Type="Boolean" />
+          <Property Name="HeardByPhone" Type="Boolean" />
+          <Property Name="HeardByFriend" Type="Boolean" />
+          <Property Name="HeardByColleague" Type="Boolean" />
+          <Property Name="HeardByOther" Type="Boolean" />
+          <Property Name="HeardOtherSpecify" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="HeardByEmail" Type="Boolean" />
+          <Property Name="InvFaxNumber" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="Notes" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="active_ogr" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="OldUsername" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="MedicalSchool" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RESPONDENTSModelStoreContainer" CdmEntityContainer="RESPONDENTSEntities">
+    <EntitySetMapping Name="PERSONAL_INFO">
+      <EntityTypeMapping TypeName="IsTypeOf(RESPONDENTSModel.PERSONAL_INFO)">
+        <MappingFragment StoreEntitySet="PERSONAL_INFO">
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="FIRST_NAME" ColumnName="FIRST_NAME" />
+          <ScalarProperty Name="LAST_NAME" ColumnName="LAST_NAME" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="ADDRESS2" ColumnName="ADDRESS2" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="STATE_PROVINCE" ColumnName="STATE_PROVINCE" />
+          <ScalarProperty Name="ZIP" ColumnName="ZIP" />
+          <ScalarProperty Name="COUNTRY" ColumnName="COUNTRY" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="HOME_PHONE" ColumnName="HOME_PHONE" />
+          <ScalarProperty Name="WORK_PHONE" ColumnName="WORK_PHONE" />
+          <ScalarProperty Name="FAX" ColumnName="FAX" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="RESTYPE" ColumnName="RESTYPE" />
+          <ScalarProperty Name="REFERRED_BY" ColumnName="REFERRED_BY" />
+          <ScalarProperty Name="AGE" ColumnName="AGE" />
+          <ScalarProperty Name="SEX" ColumnName="SEX" />
+          <ScalarProperty Name="MARITAL_STATUS" ColumnName="MARITAL_STATUS" />
+          <ScalarProperty Name="CHILDREN" ColumnName="CHILDREN" />
+          <ScalarProperty Name="OCCUPATIONAL_FIELD" ColumnName="OCCUPATIONAL_FIELD" />
+          <ScalarProperty Name="TITLE_POSITION" ColumnName="TITLE_POSITION" />
+          <ScalarProperty Name="HOUSEHOLD_INCOME" ColumnName="HOUSEHOLD_INCOME" />
+          <ScalarProperty Name="US_CITIZEN" ColumnName="US_CITIZEN" />
+          <ScalarProperty Name="EDUCATION" ColumnName="EDUCATION" />
+          <ScalarProperty Name="ETHNIC" ColumnName="ETHNIC" />
+          <ScalarProperty Name="PRACTICE_TYPE" ColumnName="PRACTICE_TYPE" />
+          <ScalarProperty Name="AMA_ID" ColumnName="AMA_ID" />
+          <ScalarProperty Name="BROWSER" ColumnName="BROWSER" />
+          <ScalarProperty Name="LAST_UPDATED" ColumnName="LAST_UPDATED" />
+          <ScalarProperty Name="ssn" ColumnName="ssn" />
+          <ScalarProperty Name="paypal" ColumnName="paypal" />
+          <ScalarProperty Name="paypalemail" ColumnName="paypalemail" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="maiden" ColumnName="maiden" />
+          <ScalarProperty Name="nurse_class" ColumnName="nurse_class" />
+          <ScalarProperty Name="acct_username" ColumnName="acct_username" />
+          <ScalarProperty Name="acct_restype" ColumnName="acct_restype" />
+          <ScalarProperty Name="program_code" ColumnName="program_code" />
+          <ScalarProperty Name="DOMAIN" ColumnName="DOMAIN" />
+          <ScalarProperty Name="LIC_NUM" ColumnName="LIC_NUM" />
+          <ScalarProperty Name="LIC_STATE" ColumnName="LIC_STATE" />
+          <ScalarProperty Name="verified" ColumnName="verified" />
+          <ScalarProperty Name="Smoke" ColumnName="Smoke" />
+          <ScalarProperty Name="HowManyPacks" ColumnName="HowManyPacks" />
+          <ScalarProperty Name="Drink" ColumnName="Drink" />
+          <ScalarProperty Name="HowManyDrinks" ColumnName="HowManyDrinks" />
+          <ScalarProperty Name="WillParticipate" ColumnName="WillParticipate" />
+          <ScalarProperty Name="SignedUp" ColumnName="SignedUp" />
+          <ScalarProperty Name="ReceiveEmail" ColumnName="ReceiveEmail" />
+          <ScalarProperty Name="CheckedPreferences" ColumnName="CheckedPreferences" />
+          <ScalarProperty Name="CheckedMedicalField" ColumnName="CheckedMedicalField" />
+          <ScalarProperty Name="Pets" ColumnName="Pets" />
+          <ScalarProperty Name="TestAccount" ColumnName="TestAccount" />
+          <ScalarProperty Name="AreYouAHuntingEnthusiast" ColumnName="AreYouAHuntingEnthusiast" />
+          <ScalarProperty Name="AreYouASportsEnthusiast" ColumnName="AreYouASportsEnthusiast" />
+          <ScalarProperty Name="Coded" ColumnName="Coded" />
+          <ScalarProperty Name="Add2" ColumnName="Add2" />
+          <ScalarProperty Name="AlternateEmail" ColumnName="AlternateEmail" />
+          <ScalarProperty Name="Bounced" ColumnName="Bounced" />
+          <ScalarProperty Name="UsingAlias" ColumnName="UsingAlias" />
+          <ScalarProperty Name="mag1" ColumnName="mag1" />
+          <ScalarProperty Name="mag2" ColumnName="mag2" />
+          <ScalarProperty Name="mag3" ColumnName="mag3" />
+          <ScalarProperty Name="Agent" ColumnName="Agent" />
+          <ScalarProperty Name="RefID" ColumnName="RefID" />
+          <ScalarProperty Name="ValidEmail" ColumnName="ValidEmail" />
+          <ScalarProperty Name="InvitationID" ColumnName="InvitationID" />
+          <ScalarProperty Name="HeardByPostcard" ColumnName="HeardByPostcard" />
+          <ScalarProperty Name="HeardByFax" ColumnName="HeardByFax" />
+          <ScalarProperty Name="HeardByPhone" ColumnName="HeardByPhone" />
+          <ScalarProperty Name="HeardByFriend" ColumnName="HeardByFriend" />
+          <ScalarProperty Name="HeardByColleague" ColumnName="HeardByColleague" />
+          <ScalarProperty Name="HeardByOther" ColumnName="HeardByOther" />
+          <ScalarProperty Name="HeardOtherSpecify" ColumnName="HeardOtherSpecify" />
+          <ScalarProperty Name="HeardByEmail" ColumnName="HeardByEmail" />
+          <ScalarProperty Name="InvFaxNumber" ColumnName="InvFaxNumber" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="active_ogr" ColumnName="active_ogr" />
+          <ScalarProperty Name="OldUsername" ColumnName="OldUsername" />
+          <ScalarProperty Name="MedicalSchool" ColumnName="MedicalSchool" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
