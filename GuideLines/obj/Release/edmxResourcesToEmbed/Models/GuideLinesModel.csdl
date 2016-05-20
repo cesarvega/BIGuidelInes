@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BI_GUIDELINESModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BookMarks" EntityType="BI_GUIDELINESModel.BookMark" />
+    <EntitySet Name="ClientBookmarks" EntityType="BI_GUIDELINESModel.ClientBookmark" />
+    <EntitySet Name="Clients" EntityType="BI_GUIDELINESModel.Client" />
+    <EntitySet Name="UserBookmarks" EntityType="BI_GUIDELINESModel.UserBookmark" />
+    <EntitySet Name="ppr_ProjectListTable" EntityType="BI_GUIDELINESModel.ppr_ProjectListTable" />
+    <EntitySet Name="CompetitiveLandscapes" EntityType="BI_GUIDELINESModel.CompetitiveLandscape" />
+    <EntitySet Name="PPRQueue" EntityType="BI_GUIDELINESModel.PPRQueue" />
+    <EntitySet Name="PPRTemplateForms" EntityType="BI_GUIDELINESModel.PPRTemplateForm" />
+    <EntitySet Name="ClientQueues" EntityType="BI_GUIDELINESModel.ClientQueue" />
+    <EntitySet Name="PPRBITeams" EntityType="BI_GUIDELINESModel.PPRBITeams" />
+  </EntityContainer>
+  <EntityType Name="BookMark">
+    <Key>
+      <PropertyRef Name="BookmarkId" />
+    </Key>
+    <Property Name="BookmarkId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BookmarkDescription" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookmarklongDescription" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="BookmarkProjectId" Type="Int32" Nullable="false" />
+    <Property Name="BookmarkUserId" Type="Int32" Nullable="false" />
+    <Property Type="String" Name="BookmarkAnswer" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="true" />
+    <Property Type="String" Name="BookmarkQuestion" Nullable="true" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BookmarkAnswerId" Type="Int32" />
+    <Property Name="BookmarkAnswerTypeId" Type="Int32" />
+    <Property Name="BookmarkSectionId" Type="Int32" />
+    <Property Name="Created" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Updated" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ClientBookmark">
+    <Key>
+      <PropertyRef Name="ClientBookmarksId" />
+    </Key>
+    <Property Name="ClientBookmarksId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClientId" Type="Int32" Nullable="false" />
+    <Property Name="BookmarkId" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Created" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Updated" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ClientId" />
+    </Key>
+    <Property Name="ClientId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ClientFullName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ClientTitle" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClientFirstName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ClientLastName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="ClientPassword" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ClientProject" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ClientProjectId" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClientAddress" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ClientPhone" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ClientEmail" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ClientCompany" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="ClientQuestions" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ClientEmailSubject" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ClientEmailBody" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AdminEmailAddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ClientProjectTemplate" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Created" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Updated" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="UserBookmark">
+    <Key>
+      <PropertyRef Name="UserBookmarkId" />
+    </Key>
+    <Property Name="UserBookmarkId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="BookamrkId" Type="Int32" />
+    <Property Name="ProjectId" Type="Int32" />
+    <Property Name="BookmarkSectionId" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Created" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Updated" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ppr_ProjectListTable">
+    <Key>
+      <PropertyRef Name="ppr_ProjectListId" />
+    </Key>
+    <Property Type="Int32" Name="ppr_ProjectListId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ProjectName" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="DateTime" Name="SalesDate" Precision="3" />
+    <Property Type="String" Name="LeadDirectorName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BrandManager" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Split" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProjectAmount" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ClientName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Office" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Created" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Updated" Precision="3" />
+    <Property Type="String" Name="UpdatedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CompetitiveLandscape">
+    <Key>
+      <PropertyRef Name="CompetitiveLandscapeId" />
+    </Key>
+    <Property Type="Int32" Name="CompetitiveLandscapeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ProjectId" Nullable="false" />
+    <Property Type="String" Name="ProjectName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Company" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BrandName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NonproprietaryName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ClinicalTrialName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ClassName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PointsOfDifferentiation" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Created" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Updated" Precision="3" />
+    <Property Type="String" Name="UpdatedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PPRQueue">
+    <Key>
+      <PropertyRef Name="PPRQueueId" />
+    </Key>
+    <Property Type="Int32" Name="PPRQueueId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ProjectId" Nullable="false" />
+    <Property Type="String" Name="ProjectName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Projectlink" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Created" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Updated" Precision="3" />
+    <Property Type="String" Name="UpdatedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PPRTemplateForm">
+    <Key>
+      <PropertyRef Name="PPRTemplateFormId" />
+    </Key>
+    <Property Type="Int32" Name="PPRTemplateFormId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ProjectId" Nullable="false" />
+    <Property Type="String" Name="ProjectName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Comment" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="InputGroup" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Qestion" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TemplateType" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="VersionControlString" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Answer" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Created" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Updated" Precision="3" />
+    <Property Type="String" Name="UpdatedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ClientQueue">
+    <Key>
+      <PropertyRef Name="ClientQueueId" />
+    </Key>
+    <Property Name="ClientQueueId" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+    <Property Name="ClientName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="ProjectName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="TimeStamp" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Type="String" Name="Browser" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Created" Nullable="false" Precision="3" Type="DateTime" />
+    <Property Name="CreatedBy" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="Updated" Precision="3" Type="DateTime" />
+    <Property Name="UpdatedBy" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+  </EntityType>
+  <EntityType Name="PPRBITeams">
+    <Key>
+      <PropertyRef Name="PPRBITeamId" />
+    </Key>
+    <Property Type="Int32" Name="PPRBITeamId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="TeamName" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

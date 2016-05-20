@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RESPONDENTSModelStoreContainer" CdmEntityContainer="RESPONDENTSEntities">
+    <EntitySetMapping Name="PERSONAL_INFO">
+      <EntityTypeMapping TypeName="IsTypeOf(RESPONDENTSModel.PERSONAL_INFO)">
+        <MappingFragment StoreEntitySet="PERSONAL_INFO">
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="FIRST_NAME" ColumnName="FIRST_NAME" />
+          <ScalarProperty Name="LAST_NAME" ColumnName="LAST_NAME" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="ADDRESS2" ColumnName="ADDRESS2" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="STATE_PROVINCE" ColumnName="STATE_PROVINCE" />
+          <ScalarProperty Name="ZIP" ColumnName="ZIP" />
+          <ScalarProperty Name="COUNTRY" ColumnName="COUNTRY" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="HOME_PHONE" ColumnName="HOME_PHONE" />
+          <ScalarProperty Name="WORK_PHONE" ColumnName="WORK_PHONE" />
+          <ScalarProperty Name="FAX" ColumnName="FAX" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="RESTYPE" ColumnName="RESTYPE" />
+          <ScalarProperty Name="REFERRED_BY" ColumnName="REFERRED_BY" />
+          <ScalarProperty Name="AGE" ColumnName="AGE" />
+          <ScalarProperty Name="SEX" ColumnName="SEX" />
+          <ScalarProperty Name="MARITAL_STATUS" ColumnName="MARITAL_STATUS" />
+          <ScalarProperty Name="CHILDREN" ColumnName="CHILDREN" />
+          <ScalarProperty Name="OCCUPATIONAL_FIELD" ColumnName="OCCUPATIONAL_FIELD" />
+          <ScalarProperty Name="TITLE_POSITION" ColumnName="TITLE_POSITION" />
+          <ScalarProperty Name="HOUSEHOLD_INCOME" ColumnName="HOUSEHOLD_INCOME" />
+          <ScalarProperty Name="US_CITIZEN" ColumnName="US_CITIZEN" />
+          <ScalarProperty Name="EDUCATION" ColumnName="EDUCATION" />
+          <ScalarProperty Name="ETHNIC" ColumnName="ETHNIC" />
+          <ScalarProperty Name="PRACTICE_TYPE" ColumnName="PRACTICE_TYPE" />
+          <ScalarProperty Name="AMA_ID" ColumnName="AMA_ID" />
+          <ScalarProperty Name="BROWSER" ColumnName="BROWSER" />
+          <ScalarProperty Name="LAST_UPDATED" ColumnName="LAST_UPDATED" />
+          <ScalarProperty Name="ssn" ColumnName="ssn" />
+          <ScalarProperty Name="paypal" ColumnName="paypal" />
+          <ScalarProperty Name="paypalemail" ColumnName="paypalemail" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="maiden" ColumnName="maiden" />
+          <ScalarProperty Name="nurse_class" ColumnName="nurse_class" />
+          <ScalarProperty Name="acct_username" ColumnName="acct_username" />
+          <ScalarProperty Name="acct_restype" ColumnName="acct_restype" />
+          <ScalarProperty Name="program_code" ColumnName="program_code" />
+          <ScalarProperty Name="DOMAIN" ColumnName="DOMAIN" />
+          <ScalarProperty Name="LIC_NUM" ColumnName="LIC_NUM" />
+          <ScalarProperty Name="LIC_STATE" ColumnName="LIC_STATE" />
+          <ScalarProperty Name="verified" ColumnName="verified" />
+          <ScalarProperty Name="Smoke" ColumnName="Smoke" />
+          <ScalarProperty Name="HowManyPacks" ColumnName="HowManyPacks" />
+          <ScalarProperty Name="Drink" ColumnName="Drink" />
+          <ScalarProperty Name="HowManyDrinks" ColumnName="HowManyDrinks" />
+          <ScalarProperty Name="WillParticipate" ColumnName="WillParticipate" />
+          <ScalarProperty Name="SignedUp" ColumnName="SignedUp" />
+          <ScalarProperty Name="ReceiveEmail" ColumnName="ReceiveEmail" />
+          <ScalarProperty Name="CheckedPreferences" ColumnName="CheckedPreferences" />
+          <ScalarProperty Name="CheckedMedicalField" ColumnName="CheckedMedicalField" />
+          <ScalarProperty Name="Pets" ColumnName="Pets" />
+          <ScalarProperty Name="TestAccount" ColumnName="TestAccount" />
+          <ScalarProperty Name="AreYouAHuntingEnthusiast" ColumnName="AreYouAHuntingEnthusiast" />
+          <ScalarProperty Name="AreYouASportsEnthusiast" ColumnName="AreYouASportsEnthusiast" />
+          <ScalarProperty Name="Coded" ColumnName="Coded" />
+          <ScalarProperty Name="Add2" ColumnName="Add2" />
+          <ScalarProperty Name="AlternateEmail" ColumnName="AlternateEmail" />
+          <ScalarProperty Name="Bounced" ColumnName="Bounced" />
+          <ScalarProperty Name="UsingAlias" ColumnName="UsingAlias" />
+          <ScalarProperty Name="mag1" ColumnName="mag1" />
+          <ScalarProperty Name="mag2" ColumnName="mag2" />
+          <ScalarProperty Name="mag3" ColumnName="mag3" />
+          <ScalarProperty Name="Agent" ColumnName="Agent" />
+          <ScalarProperty Name="RefID" ColumnName="RefID" />
+          <ScalarProperty Name="ValidEmail" ColumnName="ValidEmail" />
+          <ScalarProperty Name="InvitationID" ColumnName="InvitationID" />
+          <ScalarProperty Name="HeardByPostcard" ColumnName="HeardByPostcard" />
+          <ScalarProperty Name="HeardByFax" ColumnName="HeardByFax" />
+          <ScalarProperty Name="HeardByPhone" ColumnName="HeardByPhone" />
+          <ScalarProperty Name="HeardByFriend" ColumnName="HeardByFriend" />
+          <ScalarProperty Name="HeardByColleague" ColumnName="HeardByColleague" />
+          <ScalarProperty Name="HeardByOther" ColumnName="HeardByOther" />
+          <ScalarProperty Name="HeardOtherSpecify" ColumnName="HeardOtherSpecify" />
+          <ScalarProperty Name="HeardByEmail" ColumnName="HeardByEmail" />
+          <ScalarProperty Name="InvFaxNumber" ColumnName="InvFaxNumber" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="active_ogr" ColumnName="active_ogr" />
+          <ScalarProperty Name="OldUsername" ColumnName="OldUsername" />
+          <ScalarProperty Name="MedicalSchool" ColumnName="MedicalSchool" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

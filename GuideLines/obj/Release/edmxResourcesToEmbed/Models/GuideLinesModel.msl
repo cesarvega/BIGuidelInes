@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BI_GUIDELINESModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="BookMarks">
+      <EntityTypeMapping TypeName="IsTypeOf(BI_GUIDELINESModel.BookMark)">
+        <MappingFragment StoreEntitySet="BookMarks">
+          <ScalarProperty Name="BookmarkId" ColumnName="BookmarkId" />
+          <ScalarProperty Name="BookmarkDescription" ColumnName="BookmarkDescription" />
+          <ScalarProperty Name="BookmarklongDescription" ColumnName="BookmarklongDescription" />
+          <ScalarProperty Name="BookmarkProjectId" ColumnName="BookmarkProjectId" />
+          <ScalarProperty Name="BookmarkUserId" ColumnName="BookmarkUserId" />
+          <ScalarProperty Name="BookmarkAnswer" ColumnName="BookmarkAnswer" />
+          <ScalarProperty Name="BookmarkQuestion" ColumnName="BookmarkQuestion" />
+          <ScalarProperty Name="BookmarkAnswerId" ColumnName="BookmarkAnswerId" />
+          <ScalarProperty Name="BookmarkAnswerTypeId" ColumnName="BookmarkAnswerTypeId" />
+          <ScalarProperty Name="BookmarkSectionId" ColumnName="BookmarkSectionId" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Updated" ColumnName="Updated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientBookmarks">
+      <EntityTypeMapping TypeName="IsTypeOf(BI_GUIDELINESModel.ClientBookmark)">
+        <MappingFragment StoreEntitySet="ClientBookmarks">
+          <ScalarProperty Name="ClientBookmarksId" ColumnName="ClientBookmarksId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="BookmarkId" ColumnName="BookmarkId" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Updated" ColumnName="Updated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="IsTypeOf(BI_GUIDELINESModel.Client)">
+        <MappingFragment StoreEntitySet="Clients">
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="ClientFullName" ColumnName="ClientFullName" />
+          <ScalarProperty Name="ClientTitle" ColumnName="ClientTitle" />
+          <ScalarProperty Name="ClientFirstName" ColumnName="ClientFirstName" />
+          <ScalarProperty Name="ClientLastName" ColumnName="ClientLastName" />
+          <ScalarProperty Name="ClientPassword" ColumnName="ClientPassword" />
+          <ScalarProperty Name="ClientProject" ColumnName="ClientProject" />
+          <ScalarProperty Name="ClientProjectId" ColumnName="ClientProjectId" />
+          <ScalarProperty Name="ClientAddress" ColumnName="ClientAddress" />
+          <ScalarProperty Name="ClientPhone" ColumnName="ClientPhone" />
+          <ScalarProperty Name="ClientEmail" ColumnName="ClientEmail" />
+          <ScalarProperty Name="ClientCompany" ColumnName="ClientCompany" />
+          <ScalarProperty Name="ClientQuestions" ColumnName="ClientQuestions" />
+          <ScalarProperty Name="ClientEmailSubject" ColumnName="ClientEmailSubject" />
+          <ScalarProperty Name="ClientEmailBody" ColumnName="ClientEmailBody" />
+          <ScalarProperty Name="AdminEmailAddress" ColumnName="AdminEmailAddress" />
+          <ScalarProperty Name="ClientProjectTemplate" ColumnName="ClientProjectTemplate" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Updated" ColumnName="Updated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserBookmarks">
+      <EntityTypeMapping TypeName="IsTypeOf(BI_GUIDELINESModel.UserBookmark)">
+        <MappingFragment StoreEntitySet="UserBookmarks">
+          <ScalarProperty Name="UserBookmarkId" ColumnName="UserBookmarkId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="BookamrkId" ColumnName="BookamrkId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="BookmarkSectionId" ColumnName="BookmarkSectionId" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Updated" ColumnName="Updated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ppr_ProjectListTable">
+      <EntityTypeMapping TypeName="IsTypeOf(BI_GUIDELINESModel.ppr_ProjectListTable)">
+        <MappingFragment StoreEntitySet="ppr_ProjectListTable">
+          <ScalarProperty Name="ppr_ProjectListId" ColumnName="ppr_ProjectListId" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="SalesDate" ColumnName="SalesDate" />
+          <ScalarProperty Name="LeadDirectorName" ColumnName="LeadDirectorName" />
+          <ScalarProperty Name="BrandManager" ColumnName="BrandManager" />
+          <ScalarProperty Name="Split" ColumnName="Split" />
+          <ScalarProperty Name="ProjectAmount" ColumnName="ProjectAmount" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="Office" ColumnName="Office" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Updated" ColumnName="Updated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CompetitiveLandscapes">
+      <EntityTypeMapping TypeName="IsTypeOf(BI_GUIDELINESModel.CompetitiveLandscape)">
+        <MappingFragment StoreEntitySet="CompetitiveLandscapes">
+          <ScalarProperty Name="CompetitiveLandscapeId" ColumnName="CompetitiveLandscapeId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="NonproprietaryName" ColumnName="NonproprietaryName" />
+          <ScalarProperty Name="ClinicalTrialName" ColumnName="ClinicalTrialName" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+          <ScalarProperty Name="PointsOfDifferentiation" ColumnName="PointsOfDifferentiation" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Updated" ColumnName="Updated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PPRQueue">
+      <EntityTypeMapping TypeName="IsTypeOf(BI_GUIDELINESModel.PPRQueue)">
+        <MappingFragment StoreEntitySet="PPRQueue">
+          <ScalarProperty Name="PPRQueueId" ColumnName="PPRQueueId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="Projectlink" ColumnName="Projectlink" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Updated" ColumnName="Updated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PPRTemplateForms">
+      <EntityTypeMapping TypeName="IsTypeOf(BI_GUIDELINESModel.PPRTemplateForm)">
+        <MappingFragment StoreEntitySet="PPRTemplateForms">
+          <ScalarProperty Name="PPRTemplateFormId" ColumnName="PPRTemplateFormId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="InputGroup" ColumnName="InputGroup" />
+          <ScalarProperty Name="Qestion" ColumnName="Qestion" />
+          <ScalarProperty Name="TemplateType" ColumnName="TemplateType" />
+          <ScalarProperty Name="VersionControlString" ColumnName="VersionControlString" />
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Updated" ColumnName="Updated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientQueues">
+      <EntityTypeMapping TypeName="IsTypeOf(BI_GUIDELINESModel.ClientQueue)">
+        <MappingFragment StoreEntitySet="ClientQueues">
+          <ScalarProperty Name="Browser" ColumnName="Browser" />
+          <ScalarProperty Name="ClientQueueId" ColumnName="ClientQueueId" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Updated" ColumnName="Updated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PPRBITeams">
+      <EntityTypeMapping TypeName="IsTypeOf(BI_GUIDELINESModel.PPRBITeams)">
+        <MappingFragment StoreEntitySet="PPRBITeams">
+          <ScalarProperty Name="PPRBITeamId" ColumnName="PPRBITeamId" />
+          <ScalarProperty Name="TeamName" ColumnName="TeamName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

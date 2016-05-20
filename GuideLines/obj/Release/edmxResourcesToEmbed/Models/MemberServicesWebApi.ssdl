@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RESPONDENTSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="RESPONDENTSModelStoreContainer">
+    <EntitySet Name="PERSONAL_INFO" EntityType="RESPONDENTSModel.Store.PERSONAL_INFO" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="PERSONAL_INFO">
+    <Key>
+      <PropertyRef Name="USERNAME" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERNAME" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PASSWORD" Type="varchar" Nullable="true" MaxLength="25" />
+    <Property Name="FIRST_NAME" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="LAST_NAME" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="ADDRESS" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="ADDRESS2" Type="char" Nullable="true" MaxLength="30" />
+    <Property Name="CITY" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="STATE_PROVINCE" Type="varchar" Nullable="true" MaxLength="25" />
+    <Property Name="ZIP" Type="varchar" Nullable="true" MaxLength="12" />
+    <Property Name="COUNTRY" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="CountryCode" Type="int" Nullable="true" />
+    <Property Name="HOME_PHONE" Type="varchar" Nullable="true" MaxLength="20" />
+    <Property Name="WORK_PHONE" Type="varchar" Nullable="true" MaxLength="20" />
+    <Property Name="FAX" Type="varchar" Nullable="true" MaxLength="20" />
+    <Property Name="EMAIL" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="RESTYPE" Type="varchar" Nullable="true" MaxLength="15" />
+    <Property Name="REFERRED_BY" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="AGE" Type="varchar" Nullable="true" MaxLength="10" />
+    <Property Name="SEX" Type="varchar" Nullable="true" MaxLength="5" />
+    <Property Name="MARITAL_STATUS" Type="varchar" Nullable="true" MaxLength="10" />
+    <Property Name="CHILDREN" Type="varchar" Nullable="true" MaxLength="3" />
+    <Property Name="OCCUPATIONAL_FIELD" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="TITLE_POSITION" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="HOUSEHOLD_INCOME" Type="varchar" Nullable="true" MaxLength="25" />
+    <Property Name="US_CITIZEN" Type="varchar" Nullable="true" MaxLength="5" />
+    <Property Name="EDUCATION" Type="varchar" Nullable="true" MaxLength="30" />
+    <Property Name="ETHNIC" Type="varchar" Nullable="true" MaxLength="40" />
+    <Property Name="PRACTICE_TYPE" Type="varchar" Nullable="true" MaxLength="20" />
+    <Property Name="AMA_ID" Type="varchar" Nullable="true" MaxLength="15" />
+    <Property Name="BROWSER" Type="varchar" Nullable="true" MaxLength="40" />
+    <Property Name="LAST_UPDATED" Type="datetime" Nullable="true" />
+    <Property Name="ssn" Type="varchar" Nullable="true" MaxLength="16" />
+    <Property Name="paypal" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="paypalemail" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="active" Type="varchar" Nullable="true" MaxLength="5" />
+    <Property Name="maiden" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="nurse_class" Type="varchar" Nullable="true" MaxLength="5" />
+    <Property Name="acct_username" Type="varchar" Nullable="true" MaxLength="20" />
+    <Property Name="acct_restype" Type="varchar" Nullable="true" MaxLength="3" />
+    <Property Name="program_code" Type="int" Nullable="true" />
+    <Property Name="DOMAIN" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="LIC_NUM" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="LIC_STATE" Type="varchar" Nullable="true" MaxLength="25" />
+    <Property Name="verified" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="Smoke" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="HowManyPacks" Type="char" Nullable="true" MaxLength="20" />
+    <Property Name="Drink" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="HowManyDrinks" Type="char" Nullable="true" MaxLength="20" />
+    <Property Name="WillParticipate" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="SignedUp" Type="datetime" Nullable="true" />
+    <Property Name="ReceiveEmail" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="CheckedPreferences" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="CheckedMedicalField" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="Pets" Type="char" Nullable="true" MaxLength="10" />
+    <Property Name="TestAccount" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="AreYouAHuntingEnthusiast" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="AreYouASportsEnthusiast" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="Coded" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="Add2" Type="char" Nullable="true" MaxLength="30" />
+    <Property Name="AlternateEmail" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Bounced" Type="datetime" Nullable="true" />
+    <Property Name="UsingAlias" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="mag1" Type="varchar" Nullable="true" MaxLength="500" />
+    <Property Name="mag2" Type="varchar" Nullable="true" MaxLength="500" />
+    <Property Name="mag3" Type="varchar" Nullable="true" MaxLength="500" />
+    <Property Name="Agent" Type="char" Nullable="true" MaxLength="10" />
+    <Property Name="RefID" Type="varchar" Nullable="true" MaxLength="25" />
+    <Property Name="ValidEmail" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="InvitationID" Type="int" Nullable="true" />
+    <Property Name="HeardByPostcard" Type="bit" Nullable="true" />
+    <Property Name="HeardByFax" Type="bit" Nullable="true" />
+    <Property Name="HeardByPhone" Type="bit" Nullable="true" />
+    <Property Name="HeardByFriend" Type="bit" Nullable="true" />
+    <Property Name="HeardByColleague" Type="bit" Nullable="true" />
+    <Property Name="HeardByOther" Type="bit" Nullable="true" />
+    <Property Name="HeardOtherSpecify" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="HeardByEmail" Type="bit" Nullable="true" />
+    <Property Name="InvFaxNumber" Type="varchar" Nullable="true" MaxLength="40" />
+    <Property Name="Notes" Type="varchar" Nullable="true" MaxLength="500" />
+    <Property Name="active_ogr" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="OldUsername" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="MedicalSchool" Type="varchar" Nullable="true" MaxLength="150" />
+  </EntityType>
+</Schema>

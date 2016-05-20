@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RESPONDENTSModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="RESPONDENTSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="PERSONAL_INFO" EntityType="RESPONDENTSModel.PERSONAL_INFO" />
+  </EntityContainer>
+  <EntityType Name="PERSONAL_INFO">
+    <Key>
+      <PropertyRef Name="USERNAME" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERNAME" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="FIRST_NAME" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LAST_NAME" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="ADDRESS" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="ADDRESS2" Type="String" MaxLength="30" Unicode="false" FixedLength="true" />
+    <Property Name="CITY" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="STATE_PROVINCE" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="ZIP" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+    <Property Name="COUNTRY" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CountryCode" Type="Int32" />
+    <Property Name="HOME_PHONE" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="WORK_PHONE" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="FAX" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="RESTYPE" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="REFERRED_BY" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AGE" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="SEX" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="MARITAL_STATUS" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="CHILDREN" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="OCCUPATIONAL_FIELD" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TITLE_POSITION" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="HOUSEHOLD_INCOME" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="US_CITIZEN" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="EDUCATION" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="ETHNIC" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="PRACTICE_TYPE" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AMA_ID" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="BROWSER" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="LAST_UPDATED" Type="DateTime" Precision="3" />
+    <Property Name="ssn" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="paypal" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="paypalemail" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="active" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="maiden" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="nurse_class" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="acct_username" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="acct_restype" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="program_code" Type="Int32" />
+    <Property Name="DOMAIN" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LIC_NUM" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LIC_STATE" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="verified" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="Smoke" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="HowManyPacks" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+    <Property Name="Drink" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="HowManyDrinks" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+    <Property Name="WillParticipate" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="SignedUp" Type="DateTime" Precision="3" />
+    <Property Name="ReceiveEmail" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="CheckedPreferences" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="CheckedMedicalField" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="Pets" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="TestAccount" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="AreYouAHuntingEnthusiast" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="AreYouASportsEnthusiast" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="Coded" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="Add2" Type="String" MaxLength="30" Unicode="false" FixedLength="true" />
+    <Property Name="AlternateEmail" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Bounced" Type="DateTime" Precision="3" />
+    <Property Name="UsingAlias" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="mag1" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="mag2" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="mag3" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Agent" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="RefID" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="ValidEmail" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="InvitationID" Type="Int32" />
+    <Property Name="HeardByPostcard" Type="Boolean" />
+    <Property Name="HeardByFax" Type="Boolean" />
+    <Property Name="HeardByPhone" Type="Boolean" />
+    <Property Name="HeardByFriend" Type="Boolean" />
+    <Property Name="HeardByColleague" Type="Boolean" />
+    <Property Name="HeardByOther" Type="Boolean" />
+    <Property Name="HeardOtherSpecify" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="HeardByEmail" Type="Boolean" />
+    <Property Name="InvFaxNumber" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="Notes" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="active_ogr" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="OldUsername" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="MedicalSchool" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+  </EntityType>
+</Schema>

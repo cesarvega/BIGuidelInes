@@ -23,6 +23,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -959,12 +960,8 @@
     <Content Include="Scripts\PluginsJS\prettify.js" />
     <Content Include="Scripts\PluginsJS\scrollspy.js" />
     <Content Include="Scripts\PluginsJS\tab.js" />
-    <Content Include="Scripts\PPRFIles\angular.js" />
-    <Content Include="Scripts\PPRFIles\app.js" />
     <Content Include="Scripts\PPRFIles\ClientPPRQuestions.js" />
     <Content Include="Scripts\PPRFIles\PPRTemplateForm.js" />
-    <Content Include="Scripts\sonic.js" />
-    <Content Include="Scripts\spin.js" />
     <Content Include="Scripts\tinymce\jquery.tinymce.min.js" />
     <Content Include="Scripts\tinymce\license.txt" />
     <Content Include="Scripts\tinymce\plugins\advlist\plugin.min.js" />
@@ -1046,9 +1043,6 @@
     <Content Include="Views\Bookmarks\Create.vbhtml" />
     <Content Include="Views\Bookmarks\Edit.vbhtml" />
     <Content Include="Views\Bookmarks\Delete.vbhtml" />
-    <Content Include="Scripts\jquery-1.11.2.js" />
-    <Content Include="Views\ClientPPRQuestions\Client.ascx" />
-    <Content Include="Views\ClientPPRQuestions\form-input-text-template.html" />
     <Content Include="Views\Projects\Index.vbhtml" />
     <Content Include="Views\GeneratePPR\Index.vbhtml" />
     <Content Include="Views\GeneratePPR\Create.vbhtml" />
@@ -1072,10 +1066,6 @@
     <Content Include="Views\ClientPPRQuestions\ThankYou.vbhtml" />
     <Content Include="Views\Sur\Index.vbhtml" />
     <Content Include="Views\Account\Login.vbhtml" />
-    <Content Include="Views\ClientPPRQuestions\ClientUIforIE8.vbhtml" />
-    <Content Include="Views\ClientPPRQuestions\.jshintrc" />
-    <Content Include="Views\ClientPPRQuestions\IE8.sublime-project" />
-    <Content Include="Views\ClientPPRQuestions\IE8.sublime-workspace" />
     <Content Include="Views\ClientQueue\Index.vbhtml" />
     <Content Include="Views\ClientQueue\Details.vbhtml" />
     <Content Include="Views\ClientQueue\Create.vbhtml" />

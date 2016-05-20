@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="797e39eb8b39489d9402a9a05315c53b" Name="Diagram1">
+        <EntityTypeShape EntityType="BI_GUIDELINESModel.BookMark" Width="2" PointX="0.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BI_GUIDELINESModel.ClientBookmark" Width="1.75" PointX="2.625" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BI_GUIDELINESModel.Client" Width="1.75" PointX="4.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BI_GUIDELINESModel.UserBookmark" Width="1.875" PointX="6.625" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BI_GUIDELINESModel.ppr_ProjectListTable" Width="1.875" PointX="6.5" PointY="3.625" />
+        <EntityTypeShape EntityType="BI_GUIDELINESModel.CompetitiveLandscape" Width="2.75" PointX="0.5" PointY="4.625" />
+        <EntityTypeShape EntityType="BI_GUIDELINESModel.PPRQueue" Width="1.75" PointX="8.625" PointY="3.625" />
+        <EntityTypeShape EntityType="BI_GUIDELINESModel.PPRTemplateForm" Width="2" PointX="10.625" PointY="3.625" />
+        <EntityTypeShape EntityType="BI_GUIDELINESModel.ClientQueue" PointX="3.375" PointY="5.875" Width="2.375" />
+        <EntityTypeShape EntityType="BI_GUIDELINESModel.PPRBITeams" Width="1.875" PointX="8.75" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
