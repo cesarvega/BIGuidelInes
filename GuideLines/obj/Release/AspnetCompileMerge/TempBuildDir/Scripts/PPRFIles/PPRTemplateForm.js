@@ -176,6 +176,8 @@ var loadAdvanceSearchProjects = function (projectDataAdapter) {
                 UserTeamOffice = "New York 2";
             } else if ($.inArray("NY-Team3", clientInfo) !== -1) {
                 UserTeamOffice = "New York 3";
+            } else if ($.inArray("NY-Team4", clientInfo) !== -1) {
+                UserTeamOffice = "New York 4";
             } else if ($.inArray("Chicago-Team1", clientInfo) !== -1) {
                 UserTeamOffice = "Chicago 1";
             } else if ($.inArray("Chicago-Team2", clientInfo) !== -1) {
@@ -199,7 +201,11 @@ var loadAdvanceSearchProjects = function (projectDataAdapter) {
             } else if ($.inArray("San Francisco Group", clientInfo) !== -1) {
                 UserTeamOffice = "San Francisco";
             } else if ($.inArray("Basel Group", clientInfo) !== -1) {
-                UserTeamOffice = "Switzerland 1";
+                if ($.inArray("Basel-Team2", clientInfo) !== -1) {
+                    UserTeamOffice = "Switzerland 2";
+                } else if ($.inArray("Basel-Team1", clientInfo) !== -1) {
+                    UserTeamOffice = "Switzerland 1";
+                }
             } else if ($.inArray("Japan Group", clientInfo) !== -1) {
                 UserTeamOffice = "Tokyo";
             } else if ($.inArray("Canada Group", clientInfo) !== -1) {

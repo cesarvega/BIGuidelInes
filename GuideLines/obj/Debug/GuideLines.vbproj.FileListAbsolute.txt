@@ -193,3 +193,4 @@ C:\Users\cvega.BI\Desktop\BI Projects\PPROnline\GuideLines\obj\Debug\GuideLines.
 C:\Users\cvega.BI\Desktop\BI Projects\PPROnline\GuideLines\obj\Debug\GuideLines.dll
 C:\Users\cvega.BI\Desktop\BI Projects\PPROnline\GuideLines\obj\Debug\GuideLines.xml
 C:\Users\cvega.BI\Desktop\BI Projects\PPROnline\GuideLines\obj\Debug\GuideLines.pdb
+C:\Users\cvega.BI\Desktop\BI Projects\PPROnline\GuideLines\obj\Debug\GuideLines.vbprojResolveAssemblyReference.cache

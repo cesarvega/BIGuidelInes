@@ -1090,7 +1090,6 @@ var autoSavedata = function () {
     removeItem4Array(listFileds2, 'CreativeDirectionTableGroup');
     for (i = 0; i < listFileds2.length; i++) {
         var inputGroup = listFileds2[i];
-        if (inputGroup != "salesDateGroup") { alert('hello')}
         if (inputGroup != "ProductAttributesTableGroup" && inputGroup != "CreativeDirectionTableGroup") {
             var qestion = $.trim($('#' + listFileds2[i]).find('.label-forms').text());
             var answer = $('#' + listFileds2[i]).find('.form-control').val();

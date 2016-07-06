@@ -58,8 +58,8 @@ Public Class ProjectListUpdatesController
         Dim adEntry As New DirectoryEntry(ldap & domainDn)
         Dim adSearch As New DirectorySearcher(adEntry)
 
-        'Dim userId As String = "alash"
-        Dim userId As String = HttpContext.Current.User.Identity.Name
+        Dim userId As String = "apascale"
+        'Dim userId As String = HttpContext.Current.User.Identity.Name
         If IsNothing(userId) Then
             userId = id
         End If

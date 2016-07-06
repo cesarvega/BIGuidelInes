@@ -501,7 +501,7 @@ End Code
     <div class="list-group">
         <label id="templateTypeDisplay" style=" border-radius: 4px; text-align: right; margin-bottom: 5px;  padding: 3px; display:block;" class="alert alert-info">Template</label>
         <div class="clear"></div>
-        <label id="projectNameDisplay" style=" border-radius: 4px; text-align: right; margin-bottom: 0px;  padding: 3px; display:block;" class="alert alert-warning ">Project</label>
+        <label id="projectNameDisplay" style="border-radius: 4px; text-align: right; margin-bottom: 0px;  padding: 3px; display:block;" class="alert alert-warning ">Project</label>
     </div>
 </div>
 
