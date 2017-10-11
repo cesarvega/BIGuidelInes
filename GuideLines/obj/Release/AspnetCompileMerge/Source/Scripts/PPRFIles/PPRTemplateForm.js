@@ -180,6 +180,10 @@ var loadAdvanceSearchProjects = function (projectDataAdapter) {
                 UserTeamOffice = "New York 4";
             } else if ($.inArray("Chicago-Team1", clientInfo) !== -1) {
                 UserTeamOffice = "Chicago 1";
+            } else if ($.inArray("Chicago", clientInfo) !== -1) {
+                UserTeamOffice = "Chicago 1";
+            } else if ($.inArray("Chicago Group", clientInfo) !== -1) {
+                UserTeamOffice = "Chicago 1";
             } else if ($.inArray("Chicago-Team2", clientInfo) !== -1) {
                 UserTeamOffice = "Chicago 2";
             } else if ($.inArray("Boston Group", clientInfo) !== -1) {
@@ -1360,7 +1364,7 @@ $(document).ready(function () {
            { html: "<div tabIndex=0 style='padding: 1px;'><div>solution for injection", label: "solution for injection", group: "injection options" },
            { html: "<div tabIndex=0 style='padding: 1px;'><div>suspension for injection", label: "suspension for injection", group: "injection options" },
 
-           { html: "<div tabIndex=0 style='padding: 1px;'><div>rectal suppositorieso", label: "rectal suppositories", group: "rectal options" },
+           { html: "<div tabIndex=0 style='padding: 1px;'><div>rectal suppositories", label: "rectal suppositories", group: "rectal options" },
 
            { html: "<div tabIndex=0 style='padding: 1px;'><div>enema", label: "enema", group: "enema options" },
            { html: "<div tabIndex=0 style='padding: 1px;'><div>intraurethral pellet", label: "intraurethral pellet", group: "vaginal options" },

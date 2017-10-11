@@ -532,7 +532,7 @@ End Code
 
     <div class="panel panel-default">
         <div class="panel-body">
-            <h1 style="display:block; margin-left: auto; color:red; margin-right: auto; width: 7em" id="loadingdata"> Loading Data...</h1>
+            <h1 class="blink-me" style="display:block; margin-left: auto; color:red; margin-right: auto; width: 7em" id="loadingdata"> LOADING...</h1>
 
             @*BI Logos and template type *@
             <div class="col-md-12 column">
@@ -1755,3 +1755,5 @@ End Code
 End Code
    <input id="MyUsername" style="display:none;" value="@MyUsername"/>
 <script type="application/javascript" src="~/Scripts/PPRFIles/ClientPPRQuestions.js"></script>
+
+

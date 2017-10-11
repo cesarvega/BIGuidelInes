@@ -1,6 +1,7 @@
 
 //Global vars
 var deploymentDomainSubfix = "pprwebsite/";
+//var deploymentDomainSubfix = "PPRTestingSite/";
 //var deploymentDomainSubfix = "";
 
 var projectName = "";
@@ -19,6 +20,7 @@ var leadDirector = "";
 var leadDirectorEmail = "";
 var beingConsiderByCounter = 0;
 var response = new $.jqx.response();
+$('#loadingdata').addClass('blink-me');
 // idle timer systmem
 var goToBIhelp = function () {
     //    var strUrl = "http://www.brandinstitute.com/contact_miami.asp";
@@ -533,9 +535,9 @@ var getClockTime = function () {
 //DOCUMENT READY
 
 $(document).ready(function () {
-
+    //$('#loadingdata').addClass('blink-me');
+  
     //add and delete new rows  buttons for competitive landscape tables
-
     //$("#intructionsAlert").modal('show');
     $("#savedataBtn").attr("disabled", "disabled");
     $("#printBtn").attr("disabled", "disabled");
@@ -573,7 +575,7 @@ $(document).ready(function () {
         queries[i[0].toString()] = i[1].toString();
     });
     var enableQuestions = queries.ClientQuestions.split(',');
-
+    //setTimeout(function () { }, 10000);
     sender = queries.ClientSender;
     if (typeof queries.ClientFullName !== "undefined" && queries.ClientFullName !== "") {
         ClientFullName = queries.ClientFullName.split('%25').join(' ');
@@ -595,8 +597,9 @@ $(document).ready(function () {
     } else {
         $("#LEAD_DIRECTOR_EMAIL").text("LeadDirectorEmail");
     };
+        loadProjectInformation(queries.ClientProjectName, queries.ClientProjectId, queries.SelectedTemplate);
+        $('#loadingdata').css('display', 'none');
 
-    loadProjectInformation(queries.ClientProjectName, queries.ClientProjectId, queries.SelectedTemplate);
 
     //tooltips
     //$("#submitData").jqxTooltip({ content: 'Submit the document when finished', position: 'left', name: 'buttontooltip' });
@@ -713,7 +716,7 @@ $(document).ready(function () {
          { html: "<div tabIndex=0 style='padding: 1px;'><div>solution for injection", label: "solution for injection", group: "injection options" },
          { html: "<div tabIndex=0 style='padding: 1px;'><div>suspension for injection", label: "suspension for injection", group: "injection options" },
 
-         { html: "<div tabIndex=0 style='padding: 1px;'><div>rectal suppositorieso", label: "rectal suppositories", group: "rectal options" },
+         { html: "<div tabIndex=0 style='padding: 1px;'><div>rectal suppositories", label: "rectal suppositories", group: "rectal options" },
 
          { html: "<div tabIndex=0 style='padding: 1px;'><div>enema", label: "enema", group: "enema options" },
          { html: "<div tabIndex=0 style='padding: 1px;'><div>intraurethral pellet", label: "intraurethral pellet", group: "vaginal options" },
@@ -964,41 +967,46 @@ var loadProjectInformation = function (ClientProjectName, ClientProjectId) {
     loadCompetitiveLandscapeData(ClientProjectName, ClientProjectId);
 
     var urlForFecthingPpr = getBaseURL() + deploymentDomainSubfix + "api/ApiPPRTemplateForm/" + ClientProjectId;
-    $.ajax({
-        url: urlForFecthingPpr,
-        type: 'GET',
-        async: false,
-        contentType: 'application/json;charset=utf-8',
-        dataType: 'json',
-        success: function (data) {
-            $(document).find('.form-control').val("");
-            if (data.length > 0) {
-                if (typeof data[0].TemplateType != "undefined" && data[0].TemplateType != "" && data[0].TemplateType != null) {
-                    templateChoice(data[0].TemplateType);
-                }
-                else {
-                    templateChoice("RX");
-                };
-                var listFileds2 = $.merge([], listFileds);
-                removeItem4Array(listFileds2, 'ProductAttributesTableGroup');
-                removeItem4Array(listFileds2, 'CreativeDirectionTableGroup');
-                for (i = 0; i < data.length; i++) {
-                    var inputGroup = listFileds2[i];
-                    if(data[i].InputGroup ==='salesDateGroup'){
-                            $("#salesDateinput").text(data[i].Answer);
+  
+        
+        $.ajax({
+            url: urlForFecthingPpr,
+            type: 'GET',
+            async: true,
+            contentType: 'application/json;charset=utf-8',
+            dataType: 'json',
+            success: function (data) {
+                $(document).find('.form-control').val("");
+                if (data.length > 0) {
+                    if (typeof data[0].TemplateType != "undefined" && data[0].TemplateType != "" && data[0].TemplateType != null) {
+                        templateChoice(data[0].TemplateType);
                     }
-                    if (inputGroup != "ProductAttributesTableGroup" && inputGroup != "CreativeDirectionTableGroup") {
-                        $('#' + data[i].InputGroup).find('.form-control').val(data[i].Answer).trigger('autosize.resize');
-                        $('#' + data[i].InputGroup).find('.selectCheckboxTextArea').val(data[i].Comment);
-                        if (data[i].VersionControlString != "" && data[i].VersionControlString != null) {
-                            $('#' + data[i].InputGroup).find('.selectCheckboxTextArea').after("<div  style='display:none' style='display:none' class='versioncontrol'>" + data[i].VersionControlString + "</div></br>");
+                    else {
+                        templateChoice("RX");
+                    };
+                    var listFileds2 = $.merge([], listFileds);
+                    removeItem4Array(listFileds2, 'ProductAttributesTableGroup');
+                    removeItem4Array(listFileds2, 'CreativeDirectionTableGroup');
+                    for (i = 0; i < data.length; i++) {
+                        var inputGroup = listFileds2[i];
+                        if (data[i].InputGroup === 'salesDateGroup') {
+                            $("#salesDateinput").text(data[i].Answer);
+                        }
+                        if (inputGroup != "ProductAttributesTableGroup" && inputGroup != "CreativeDirectionTableGroup") {
+                            $('#' + data[i].InputGroup).find('.form-control').val(data[i].Answer).trigger('autosize.resize');
+                            $('#' + data[i].InputGroup).find('.selectCheckboxTextArea').val(data[i].Comment);
+                            if (data[i].VersionControlString != "" && data[i].VersionControlString != null) {
+                                $('#' + data[i].InputGroup).find('.selectCheckboxTextArea').after("<div  style='display:none' style='display:none' class='versioncontrol'>" + data[i].VersionControlString + "</div></br>");
+                            };
                         };
                     };
                 };
-            };
-            $('#loadingdata').css('display', 'none');
-        }
-    });
+                //$('#loadingdata').css('display', 'none');
+
+            }
+        });
+  
+   
 
 
 
